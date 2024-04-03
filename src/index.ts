@@ -1,3 +1,3 @@
-function sol(A: Array<number>, B: Array<number>) {}
+function solution(A: any[], B: any[]) {}
 
-console.log(sol([3, 5, 0, 2, 4], [1, 3, 10, 6, 7]));
+console.log(solution([], []));
