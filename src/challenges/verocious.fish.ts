@@ -1,6 +1,6 @@
 function verociuosFish(A: any[], B: any[]) {
+  const preZeroes = B.indexOf(1);
   let survivors = 0;
-  let preZeroes = B.indexOf(1);
   if (A.length == B.length) {
     //remove fishes moving upstream with no opposition 😂
     if (preZeroes > 0) {
@@ -14,7 +14,6 @@ function verociuosFish(A: any[], B: any[]) {
       B.lastIndexOf(0) > -1
     ) {
       for (let fish = 0; fish < A.length; fish++) {
-        console.log(A, fish, "sizes");
         let nextFish = fish + 1;
         //if two fish meet remove one that is eaten
         if (B[fish] == 1 && B[nextFish] == 0) {
@@ -34,4 +33,4 @@ function verociuosFish(A: any[], B: any[]) {
   }
 }
 
-console.log(verociuosFish([4, 2, 10, 5, 3], [0, 0, 1, 1, 1]));
+console.log(verociuosFish([4, 2, 1, 3, 5], [1, 1, 0, 0, 0]));
